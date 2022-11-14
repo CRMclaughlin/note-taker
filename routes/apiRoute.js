@@ -1,20 +1,20 @@
 const router = require('express').Router();
-const store = require('../db/db.json')
+import db from '../db/db.json';
 
 router.get('/notes', (req, res) => {
-    store.getNote().then((note) => {
+    db.getNote().then((note) => {
         return res.json(note)
     }).catch((err) => res.status(500).json(err))
 });
 
 router.post('/notes', (req, res) => {
-    store.addNote(req.body).then((note) => res.join(note))
+    db.addNote(req.body).then((note) => res.join(note))
     .catch((err) => res.status(500).json(err));
 })
 
 router.delete('/notes/:id', (req, res) => {
-    store.removeNote(req.params.id).then(() => res.json ({ ok: true }))
+    db.removeNote(req.params.id).then(() => res.json ({ ok: true }))
     .catch((err) => res.status(500).json(err))
 })
 
-module.exports = router 
+export default apiRoute

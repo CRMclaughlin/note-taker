@@ -1,7 +1,7 @@
-const express = require('express');
+import express from 'express';
 
-const htmlRoute = require('./routes/htmlRoute')
-const apiRoute = require('./routes/apiRoute')
+// import htmlRoute from '/routes/htmlRoute.js'
+// import apiRoute from '/routes/apiRoute.js'
 
 const app = express();
 const PORT = 3000;
@@ -10,8 +10,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-app.use('/', htmlRoute);
-app.use('/api', apiRoute);
+// app.use('/', htmlRoute);
+// app.use('/api', apiRoute);
 
 app.listen(PORT, () => {
     console.log(`listening on http:localhost:${PORT}`)

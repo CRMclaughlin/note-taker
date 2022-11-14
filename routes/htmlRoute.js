@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 const router = require('express').Router();
 
 
@@ -10,4 +10,4 @@ router.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "..public.html"))
 });
 
-module.exports = router;
+export default htmlRoute;
