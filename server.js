@@ -1,17 +1,16 @@
 import express from 'express';
-
-// import htmlRoute from '/routes/htmlRoute.js'
-// import apiRoute from '/routes/apiRoute.js'
+import fs from 'fs';
+import path from 'path';
+import db from './db/db.json';
+import uuid  from 'uuidv4';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.port || 3000;
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(express.json());
 
-// app.use('/', htmlRoute);
-// app.use('/api', apiRoute);
+
 
 app.listen(PORT, () => {
     console.log(`listening on http:localhost:${PORT}`)
