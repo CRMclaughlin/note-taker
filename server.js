@@ -59,3 +59,18 @@ app.delete('/api/notes/:id', (req, res) => {
     res.redirect('api/notes')
 })
 
+// HTML routes
+
+// HTML Routes
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'notes.html'))
+})
+
+app.listen(PORT , () => {
+    console.log(`API server listening on ${PORT}`)
+})
