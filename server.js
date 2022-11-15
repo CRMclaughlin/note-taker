@@ -23,4 +23,39 @@ function createNewNote(body, notesArray) {
         return body;
 }
 
+// API Routes
+
+// Get api/notes will read the db.json and return all saved notes as json
+
+app.get('/api.notes', (req, res) => {
+    fs.readFile('./db/db.json', (err, data) => {
+        if(err) throw err;
+        let dbData = JSON.parse(data);
+        console.table(dbData)
+        res.json(dbData)
+    });
+})
+
+// Post /api/notes will recieve a new note to save on the request body, add it to db.json, and return new note to the client
+
+app.post('/api.notes', (req, res) => {
+    const newNote = req.body;
+    newNote.id = uuid()
+    db.push(newNote)
+    fs.writeFileSync('./db/db.json', JSON.stringify(db))
+    res.json
+})
+
+// Delete note
+
+app.delete('/api/notes/:id', (req, res) => {
+    const deleteDb = db.filter((note) =>
+    note.id !== req.params.id)
+
+    fs.writeFileSync('./db/db.json', JSON.stringify(deleteDb))
+
+    res.json(deleteDb)
+
+    res.redirect('api/notes')
+})
 
