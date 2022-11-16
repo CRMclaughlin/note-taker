@@ -25,14 +25,14 @@
   <h3> Steps to initialize this project locally on your machine <h3>
     
     1. Copy link from Github repo and clone to your coding workspace
-    2. In your terminal use the command `npm init -y` to install Node Package Manager
-    3. In your terminal use the command `npm i express` to install inquirer
-    4. In your terminal use the command `npm i uuidv4` to insall UUID
+    2. In your terminal use the command "npm init -y" to install Node Package Manager
+    3. In your terminal use the command "npm i express" to install inquirer
+    4. In your terminal use the command "npm i uuidv4" to insall UUID
     
   
 ## Usage 
   
-* Navigate to the depoloyed Herouku page to begin taking notes 📝
+* Navigate to the depoloyed [Herouku page]() to begin taking notes 📝
 
 * To add a note press the ➕ icon, to save the note press the 💾 icon, and to delete click the 🗑 icon next to the note. 
 
