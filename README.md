@@ -34,7 +34,7 @@
   
 * Navigate to the depoloyed [Herouku page]() to begin taking notes 📝
 
-* To add a note press the ➕ icon, to save the note press the 💾 icon, and to delete click the 🗑 icon next to the note. 
+* To add a note press the  ➕  icon, to save the note press the  💾  icon, and to delete click the  🗑  icon next to the note. 
 
   
 ## Demo
