@@ -22,9 +22,11 @@ app.use(express.json());
 
 app.get('/api/notes', (req, res) => {
     fs.readFile('./db/db.json', (err, data) => {
+        
         ///error logging
         if (err) throw err;
         let dbData = JSON.parse(data);
+        
         //Returns new database
         res.json(dbData)
     });   
@@ -33,10 +35,19 @@ app.get('/api/notes', (req, res) => {
 // Post /api/notes will recieve a new note to save on the request body, add it to db.json, and return new note to the client
 
 app.post('/api/notes', (req, res) => {
+    // Grabs notes from the body
     const newNote = req.body;
+
+    // Adds a unique id to each note
     newNote.id = uuidv4()
+
+    // Pushes the note into array
     db.push(newNote)
+
+    // Updates the json file with new object
     fs.writeFileSync('./db/db.json', JSON.stringify(db))
+
+    // Responds with the note object
     res.json(db)
 })
 
@@ -46,6 +57,7 @@ app.delete('/api/notes/:id', (req, res) => {
     const deleteNote = db.filter((note) =>
     note.id !== req.params.id)
 
+    // Updates the json file to show modified array
     fs.writeFileSync('./db/db.json', JSON.stringify(deleteNote))
 
     res.json(deleteNote)
@@ -56,7 +68,7 @@ app.delete('/api/notes/:id', (req, res) => {
 
 
 // HTML Routes
-
+// need to change this to *, but index.js needs to be modified?
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
