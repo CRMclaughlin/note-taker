@@ -34,10 +34,14 @@
   
 * Navigate to the depoloyed [Herouku page]() to begin taking notes 📝
 
-* To add a note press the ➕ icon, to save the note press the 💾 icon, and to delete click the 🗑 icon next to the note. 
+* To add a note press the  ➕  icon, to save the note press the  💾  icon, and to delete click the  🗑  icon next to the note. 
 
   
 ## Demo
+
+<img width="1512" alt="Screen Shot 2022-11-15 at 8 20 01 PM" src="https://user-images.githubusercontent.com/111208223/202068095-2b0ff3ef-860b-41b8-a934-4c9ac8532d50.png">
+   
+   ![Screen Shot 2022-11-15 at 8 21 37 PM (2)](https://user-images.githubusercontent.com/111208223/202068133-533e8e77-066d-4b2d-91c3-f2b9fdc29449.png)
 
 
   
