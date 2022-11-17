@@ -32,7 +32,7 @@
   
 ## Usage 
   
-* Navigate to the depoloyed [Herouku page]() to begin taking notes 📝
+* Navigate to the depoloyed [Herouku page](https://infinite-dawn-57264.herokuapp.com/) to begin taking notes 📝
 
 * To add a note press the  ➕  icon, to save the note press the  💾  icon, and to delete click the  🗑  icon next to the note. 
 
